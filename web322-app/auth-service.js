@@ -42,24 +42,20 @@ const userSchema = new mongoose.Schema({
   ],
 });
 
-// Create the User model
 let User;
 
 module.exports.initialize = function () {
   return new Promise((resolve, reject) => {
-    mongoose
-      .createConnection(
-        "mongodb+srv://rdealencarqueiroz:seneca@clusterrenandbs311.1zt0p.mongodb.net/",
-        {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-        }
-      )
-      .then(() => {
-        User = mongoose.model("User", userSchema);
-        resolve();
-      })
-      .catch((err) => reject(`Error connecting to MongoDB: ${err}`));
+    const db = mongoose.createConnection("mongodb+srv://<username>:<password>@<cluster-url>/<database-name>?retryWrites=true&w=majority");
+
+    db.on("error", (err) => {
+      reject(err); // Reject the promise with the provided error
+    });
+
+    db.once("open", () => {
+      User = db.model("users", userSchema);
+      resolve(); // Successfully connected and initialized
+    });
   });
 };
 
@@ -121,9 +117,7 @@ module.exports.checkUser = function (userData) {
             );
           })
           .then(() => resolve(user))
-          .catch((err) =>
-            reject(`There was an error verifying the user: ${err.message}`)
-          );
+          .catch((err) => reject(`There was an error verifying the user: ${err.message}`));
       })
       .catch((err) => reject(`Unable to find user: ${err.message}`));
   });
