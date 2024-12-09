@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "category": "Home, Garden",
+    "postDate": "2023-05-14",
+    "featureImage": "/img/lawnmower.jpg",
+    "price": 399.99,
+    "title": "Lawnmower",
+    "body": "Efficient, durable, user-friendly lawnmower for precise and effortless grass cutting.",
+    "published": true
+  },
+  {
+    "id": 2,
+    "category": "Home, Garden",
+    "postDate": "2023-05-15",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 14.99,
+    "title": "Garden Hose",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue. Vestibulum efficitur blandit ultricies.",
+    "published": true
+  },
+  {
+    "id": 3,
+    "category": "Home, Garden",
+    "postDate": "2023-05-16",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 29.99,
+    "title": "Outdoor Chair Set",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis. Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis, ut egestas turpis augue ut nisi.",
+    "published": true
+  },
+  {
+    "id": 4,
+    "category": "Home, Garden",
+    "postDate": "2023-05-17",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 49.99,
+    "title": "Garden Rake",
+    "body": "Cras convallis fringilla sem efficitur congue. Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 5,
+    "category": "Home, Garden",
+    "postDate": "2023-05-18",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 19.99,
+    "title": "Flower Pot Set",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 6,
+    "category": "Home, Garden",
+    "postDate": "2023-05-19",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 79.99,
+    "title": "Electric Hedge Trimmer",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 7,
+    "category": "Home, Garden",
+    "postDate": "2023-05-20",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 12.99,
+    "title": "Garden Gloves",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 8,
+    "category": "Home, Garden",
+    "postDate": "2023-05-21",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 34.99,
+    "title": "Weed Puller",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis, ut egestas turpis augue ut nisi.",
+    "published": true
+  },
+  {
+    "id": 9,
+    "category": "Home, Garden",
+    "postDate": "2023-05-22",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 24.99,
+    "title": "Garden Shears",
+    "body": "Curabitur vel convallis augue.",
+    "published": true
+  },
+  {
+    "id": 10,
+    "category": "Home, Garden",
+    "postDate": "2023-05-23",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 59.99,
+    "title": "Compost Bin",
+    "body": "Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 11,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-14",
+    "featureImage": "/img/gamingconsole.jpg",
+    "price": 299.99,
+    "title": "Gaming Console",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue. Vestibulum efficitur blandit ultricies.",
+    "published": true
+  },
+  {
+    "id": 12,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-15",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 799.99,
+    "title": "Laptop",
+    "body": "Sed tempus mollis orci id facilisis. Aliquam placerat, ipsum eget egestas malesuada.",
+    "published": true
+  },
+  {
+    "id": 13,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-16",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 49.99,
+    "title": "Wireless Mouse",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 14,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-17",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 129.99,
+    "title": "Mechanical Keyboard",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 15,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-18",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 599.99,
+    "title": "Smartphone",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 16,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-19",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 249.99,
+    "title": "Smartwatch",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 17,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-20",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 69.99,
+    "title": "External Hard Drive",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 18,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-21",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 39.99,
+    "title": "USB-C Hub",
+    "body": "Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 19,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-22",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 499.99,
+    "title": "Tablet",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 20,
+    "category": "Electronics, Computers, Video Games",
+    "postDate": "2023-05-23",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 59.99,
+    "title": "Gaming Headset",
+    "body": "Curabitur vel convallis augue.",
+    "published": true
+  },
+  {
+    "id": 21,
+    "category": "Clothing",
+    "postDate": "2023-06-14",
+    "featureImage": "/img/clothing.jpg",
+    "price": 19.99,
+    "title": "T-Shirt",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 22,
+    "category": "Clothing",
+    "postDate": "2023-06-15",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 49.99,
+    "title": "Jeans",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 23,
+    "category": "Clothing",
+    "postDate": "2023-06-16",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 29.99,
+    "title": "Hoodie",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 24,
+    "category": "Clothing",
+    "postDate": "2023-06-17",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 14.99,
+    "title": "Socks",
+    "body": "Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 25,
+    "category": "Clothing",
+    "postDate": "2023-06-18",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 99.99,
+    "title": "Jacket",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 26,
+    "category": "Clothing",
+    "postDate": "2023-06-19",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 9.99,
+    "title": "Cap",
+    "body": "Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 27,
+    "category": "Clothing",
+    "postDate": "2023-06-20",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 24.99,
+    "title": "Scarf",
+    "body": "Curabitur vel convallis augue.",
+    "published": true
+  },
+  {
+    "id": 28,
+    "category": "Clothing",
+    "postDate": "2023-06-21",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 12.99,
+    "title": "Gloves",
+    "body": "Vestibulum efficitur blandit ultricies.",
+    "published": true
+  },
+  {
+    "id": 29,
+    "category": "Clothing",
+    "postDate": "2023-06-22",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 39.99,
+    "title": "Sneakers",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 30,
+    "category": "Clothing",
+    "postDate": "2023-06-23",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 59.99,
+    "title": "Dress",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada.",
+    "published": true
+  },
+  {
+    "id": 31,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-14",
+    "featureImage": "/img/yogamat.jpg",
+    "price": 49.99,
+    "title": "Yoga Mat",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 32,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-15",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 199.99,
+    "title": "Mountain Bike Helmet",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 33,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-16",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 24.99,
+    "title": "Water Bottle",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 34,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-17",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 59.99,
+    "title": "Tennis Racket",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 35,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-18",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 299.99,
+    "title": "Camping Tent",
+    "body": "Curabitur vel convallis augue. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 36,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-19",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 29.99,
+    "title": "Hiking Backpack",
+    "body": "Vestibulum efficitur blandit ultricies.",
+    "published": true
+  },
+  {
+    "id": 37,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-20",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 14.99,
+    "title": "Running Socks",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 38,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-21",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 89.99,
+    "title": "Kayak Paddle",
+    "body": "Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 39,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-07-22",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 119.99,
+    "title": "Sleeping Bag",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 40,
+    "category": "Sports & Outdoors",
+    "postDate": "2023-09-23",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 39.99,
+    "title": "Golf Balls (Pack of 12)",
+    "body": "Curabitur vel convallis augue.",
+    "published": true
+  },
+  {
+    "id": 41,
+    "category": "Pets",
+    "postDate": "2023-09-14",
+    "featureImage": "/img/dogleash.jpg",
+    "price": 19.99,
+    "title": "Dog Leash",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 42,
+    "category": "Pets",
+    "postDate": "2023-09-15",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 29.99,
+    "title": "Cat Scratching Post",
+    "body": "Vestibulum efficitur blandit ultricies. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 43,
+    "category": "Pets",
+    "postDate": "2023-09-16",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 9.99,
+    "title": "Pet Water Bowl",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 44,
+    "category": "Pets",
+    "postDate": "2023-09-17",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 14.99,
+    "title": "Pet Nail Clippers",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 45,
+    "category": "Pets",
+    "postDate": "2023-09-18",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 49.99,
+    "title": "Dog Bed",
+    "body": "Curabitur vel convallis augue. Sed tempus mollis orci id facilisis.",
+    "published": true
+  },
+  {
+    "id": 46,
+    "category": "Pets",
+    "postDate": "2023-09-19",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 7.99,
+    "title": "Cat Toy Mouse",
+    "body": "Vestibulum efficitur blandit ultricies.",
+    "published": true
+  },
+  {
+    "id": 47,
+    "category": "Pets",
+    "postDate": "2023-09-20",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 19.99,
+    "title": "Bird Feeder",
+    "body": "Aliquam placerat, ipsum eget egestas malesuada, neque nunc scelerisque felis.",
+    "published": true
+  },
+  {
+    "id": 48,
+    "category": "Pets",
+    "postDate": "2023-09-21",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 29.99,
+    "title": "Aquarium Starter Kit",
+    "body": "Cras convallis fringilla sem efficitur congue.",
+    "published": true
+  },
+  {
+    "id": 49,
+    "category": "Pets",
+    "postDate": "2023-09-22",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 12.99,
+    "title": "Rabbit Hay Feeder",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "published": true
+  },
+  {
+    "id": 50,
+    "category": "Pets",
+    "postDate": "2023-09-23",
+    "featureImage": "https://dummyimage.com/200x200/000/fff",
+    "price": 34.99,
+    "title": "Pet Grooming Kit",
+    "body": "Curabitur vel convallis augue.",
+    "published": true
+  }
+]
