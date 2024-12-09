@@ -16,7 +16,8 @@ const app = express();
 const storeService = require("./store-service"); //importing my module
 const itemData = require("./store-service");
 const Handlebars = require("handlebars");
-const authData = require(".auth-service");
+const authData = require(".auth-service"); //assignment06
+const clientSessions = require("client-sessions"); //assignment06
 
 //assigment04 - helpers
 const exphbs = require("express-handlebars");
@@ -57,6 +58,29 @@ const multer = require("multer");
 const streamifier = require("streamifier");
 const upload = multer();
 
+//assignment06
+app.use(
+  clientSessions({
+    cookieName: 'session', // this is the object name that will be added to 'req'
+    secret: 'o6LjQ5EVNC28ZgK64hDELM18ScpFQr', // this should be a long un-guessable string.
+    duration: 2 * 60 * 1000, // duration of the session in milliseconds (2 minutes)
+    activeDuration: 1000 * 60, // the session will be extended by this many ms each request (1 minute)
+  })
+);
+//assignment06
+app.use(function(req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
+//assignment06 - login helper
+function ensureLogin(req, res, next) {
+  if (!req.session.user) {
+    res.redirect('/login');
+  } else {
+    next();
+  }
+}
+
 // Setting the port number to listen on
 const HTTP_PORT = process.env.PORT || 8080;
 
@@ -79,7 +103,7 @@ app.use(function (req, res, next) {
 });
 
 //assignment 05
-app.get("/categories/add", (req, res) => {
+app.get("/categories/add", ensureLogin, (req, res) => {
   res.render("addCategory");
 });
 //assignment 05
@@ -94,7 +118,7 @@ app.post("/categories/add", (req, res) => {
     });
 });
 //assignment 05
-app.get("/categories/delete/:id", (req, res) => {
+app.get("/categories/delete/:id", ensureLogin, (req, res) => {
   storeService
     .deleteCategoryById(req.params.id)
     .then(() => {
@@ -105,7 +129,7 @@ app.get("/categories/delete/:id", (req, res) => {
     });
 });
 //assignment 05
-app.get("/items/delete/:id", (req, res) => {
+app.get("/items/delete/:id", ensureLogin, (req, res) => {
   storeService
     .deletePostById(req.params.id)
     .then(() => {
@@ -167,7 +191,7 @@ app.get("/shop", async (req, res) => {
 
   res.render("shop", { data: viewData });
 });
-app.get("/shop/:id", async (req, res) => {
+app.get("/shop/:id", ensureLogin, async (req, res) => {
   // Declare an object to store properties for the view
   let viewData = {};
   try {
@@ -193,10 +217,9 @@ app.get("/shop/:id", async (req, res) => {
   res.render("shop", { data: viewData });
 });
 
-// ITEMS route: (Static HTML) - Assignment 04 --> assignment05
-app.get("/items", async (req, res) => {
+// ITEMS route: assignment06
+app.get("/items", ensureLogin, async (req, res) => {
   let viewData = {};
-
   try {
     // Get all items
     const items = await storeService.getAllItems();
@@ -222,8 +245,56 @@ app.get("/items", async (req, res) => {
   }
   res.render("items", { data: viewData });
 });
+
+//assignment06 - get/login
+app.get('/login', (req, res) => {
+  res.render('login', { message: '' });
+});
+//assignment06 - get/register
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+//assignment06 - POST /register
+app.post("/register", (req, res) => {
+  authData
+    .registerUser(req.body)
+    .then(() => {
+      res.render("register", { successMessage: "User created" });
+    })
+    .catch((err) => {
+      res.render("register", { errorMessage: err, userName: req.body.userName });
+    });
+});
+//assignment06 - POST /login
+app.post("/login", (req, res) => {
+  req.body.userAgent = req.get("User-Agent");
+  authData
+    .checkUser(req.body)
+    .then((user) => {
+      req.session.user = {
+        userName: user.userName,
+        email: user.email,
+        loginHistory: user.loginHistory,
+      };
+      res.redirect("/items");
+    })
+    .catch((err) => {
+      res.render("login", { errorMessage: err, userName: req.body.userName });
+    });
+});
+//assignment06 GET /logout - Handle user logout
+app.get("/logout", (req, res) => {
+  req.session.reset(); // Clear the session
+  res.redirect("/"); // Redirect to the homepage
+});
+
+//assignment06 GET /userHistory - Render the userHistory view (protected)
+app.get("/userHistory", ensureLogin, (req, res) => {
+  res.render("userHistory", { user: req.session.user });
+});
+
 // Route to get a specific item by ID - Assignment 03
-app.get("/item/:id", (req, res) => {
+app.get("/item/:id", ensureLogin, (req, res) => {
   storeService
     .getItemById(req.params.id)
     .then((data) => res.json(data))
@@ -243,7 +314,7 @@ app.get("/api/items", (req, res) => {
 });
 
 // CATEGORIES route: (Static HTML) --> assignment05
-app.get("/categories", async (req, res) => {
+app.get("/categories", ensureLogin, async (req, res) => {
   let viewData = {};
 
   try {
@@ -260,7 +331,7 @@ app.get("/categories", async (req, res) => {
   res.render("categories", { data: viewData });
 });
 //Assignment 03: adding the item route (Static HTML) --> assignment 05
-app.get("/items/add", (req, res) => {
+app.get("/items/add", ensureLogin, (req, res) => {
   storeService
     .getCategories()
     .then((categories) => {
@@ -272,7 +343,7 @@ app.get("/items/add", (req, res) => {
 });
 
 //Assignment 03: adding the item route
-app.post("/items/add", upload.single("featureImage"), (req, res) => {
+app.post("/items/add", ensureLogin, upload.single("featureImage"), (req, res) => {
   if (req.file) {
     let streamUpload = (req) => {
       return new Promise((resolve, reject) => {
@@ -299,9 +370,9 @@ app.post("/items/add", upload.single("featureImage"), (req, res) => {
     });
   } else {
     processItem("");
-  }
+}
 
-  function processItem(imageUrl) {
+function processItem(imageUrl) {
     req.body.featureImage = imageUrl;
     storeService
       .addItem(req.body)
@@ -315,14 +386,26 @@ app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "/views/404.html"));
 });
 
-// Listen on this port to run the website locally
-storeService
-  .initialize()
-  .then(() => {
-    app.listen(HTTP_PORT, () => {
-      console.log(`Express http server listening on port: ${HTTP_PORT}`);
+// // Listen on this port to run the website locally
+// storeService
+//   .initialize()
+//   .then(() => {
+//     app.listen(HTTP_PORT, () => {
+//       console.log(`Express http server listening on port: ${HTTP_PORT}`);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log("Failed to initialize data: ", err);
+// });
+
+//assignment 06
+storeData.initialize()
+.then(authData.initialize)
+.then(function(){
+    app.listen(HTTP_PORT, function(){
+        console.log("app listening on: " + HTTP_PORT)
     });
-  })
-  .catch((err) => {
-    console.log("Failed to initialize data: ", err);
-  });
+}).catch(function(err){
+    console.log("unable to start server: " + err);
+});
+

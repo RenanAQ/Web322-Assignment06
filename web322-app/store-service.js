@@ -240,27 +240,6 @@ function getPublishedItemsByCategory(category) {
       });
   });
 }
-
-// initialize()
-//   .then((message) => {
-//     console.log(message); // Initialize success
-//     return getAllItems();
-//   })
-//   .then((items) => {
-//     console.log("All items: ", items);
-//     return getPublishedItems();
-//   })
-//   .then((publishedItems) => {
-//     console.log("Published items: ", publishedItems);
-//     return getCategories();
-//   })
-//   .then((categories) => {
-//     console.log("Categories: ", categories);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
-
 //assigment05 - creating model - item
 const Item = sequelize.define('Item', {
   body: Sequelize.TEXT,
