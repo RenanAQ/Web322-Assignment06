@@ -46,7 +46,10 @@ let User;
 
 module.exports.initialize = function () {
   return new Promise((resolve, reject) => {
-    const db = mongoose.createConnection("mongodb+srv://rdealencarqueiroz:seneca@clusterrenandbs311.1zt0p.mongodb.net/");
+    const db = mongoose.createConnection(
+      "mongodb+srv://rdealencarqueiroz:seneca@clusterrenandbs311.1zt0p.mongodb.net/",
+      { useNewUrlParser: true, useUnifiedTopology: true }
+    );
 
     db.on("error", (err) => {
       reject(err); // Reject the promise with the provided error
